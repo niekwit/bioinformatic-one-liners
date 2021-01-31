@@ -5,3 +5,6 @@
 
 *Determine number of reads in fastq file:*
 `cat file.fq | echo $((`wc -l`/4))`
+
+*Determine read length in fastq file:*
+`cat reads.fastq | awk '{if(NR%4==2) print length($1)}' | sort -n | uniq -c > read_length.txt`
