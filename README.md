@@ -18,4 +18,4 @@ Filter out reads with certain length (e.g. >30):
 
 Subset GTF file for selected genes (each gene on new line in text file):
 
-```grep -f genes.txt gencode.v19.annotation.gtf > sub-set.gtf```
+```grep -w -f genes.txt gencode.v19.annotation.gtf > sub-set.gtf```
